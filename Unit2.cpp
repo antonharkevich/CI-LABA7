@@ -1,10 +1,4 @@
-//---------------------------------------------------------------------------
 
-#pragma hdrstop
-
-#include "Unit2.h"
-//---------------------------------------------------------------------------
-#pragma package(smart_init)
 
 
 #include "Unit2.h"
@@ -18,7 +12,7 @@ void ClientInit(struct ClientList* list) {
 void ClientAdd(struct ClientList* list,struct client numb) {
 	struct ClientListItem* temp =(struct ClientListItem*)malloc(sizeof(struct ClientListItem));
 	if(temp==NULL){
-		printf("Íåäîñòàòî÷íî ïàìÿòè íà óñòðîéñòâå\n");
+		printf("ÃÃ¥Ã¤Ã®Ã±Ã²Ã Ã²Ã®Ã·Ã­Ã® Ã¯Ã Ã¬Ã¿Ã²Ã¨ Ã­Ã  Ã³Ã±Ã²Ã°Ã®Ã©Ã±Ã²Ã¢Ã¥\n");
 		exit(1);
 
 	}
@@ -76,15 +70,15 @@ void ClientDelete(struct ClientList* list, struct ClientListItem* li) {
 void ClientPrint(struct ClientList* list) {
 	ClientListItem* li = list->start;
 	while (li) {
-		printf("×åëîâåê\n");
-		printf("ÔÈÎ: %s\n",li->data.FIO);
-		printf("Êîíòàêò: %s\n",li->data.phone_number);
-		printf("Ìàðêà: %s\n",li->data.my_auto.mark);
-		printf("Ãîä âûïóñêà: %d\n",li->data.my_auto.year);
-		printf("Öåíà: %d\n",li->data.my_auto.price);
-		printf("Ñîñòîÿíèå: %s\n",li->data.my_auto.condition);
-		printf("Îáú¸ì äâèãàòåëÿ: %d\n",li->data.my_auto.engine_capacity);
-		printf("Ìàêñèìàëüíàÿ ñêîðîñòü: %d\n\n",li->data.my_auto.max_speed);
+		printf("Ã—Ã¥Ã«Ã®Ã¢Ã¥Ãª\n");
+		printf("Ã”ÃˆÃŽ: %s\n",li->data.FIO);
+		printf("ÃŠÃ®Ã­Ã²Ã ÃªÃ²: %s\n",li->data.phone_number);
+		printf("ÃŒÃ Ã°ÃªÃ : %s\n",li->data.my_auto.mark);
+		printf("ÃƒÃ®Ã¤ Ã¢Ã»Ã¯Ã³Ã±ÃªÃ : %d\n",li->data.my_auto.year);
+		printf("Ã–Ã¥Ã­Ã : %d\n",li->data.my_auto.price);
+		printf("Ã‘Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¥: %s\n",li->data.my_auto.condition);
+		printf("ÃŽÃ¡ÃºÂ¸Ã¬ Ã¤Ã¢Ã¨Ã£Ã Ã²Ã¥Ã«Ã¿: %d\n",li->data.my_auto.engine_capacity);
+		printf("ÃŒÃ ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã Ã¿ Ã±ÃªÃ®Ã°Ã®Ã±Ã²Ã¼: %d\n\n",li->data.my_auto.max_speed);
 		li = li->next;
 
 	}
