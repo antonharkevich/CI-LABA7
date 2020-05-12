@@ -1,10 +1,6 @@
-//---------------------------------------------------------------------------
-
-#pragma hdrstop
 
 #include "Unit3.h"
-//---------------------------------------------------------------------------
-#pragma package(smart_init)
+
 
 
 
@@ -18,7 +14,7 @@ void DealInit(struct DealList* list) {
 void DealAdd(struct DealList* list,struct deal numb) {
 	struct DealListItem* temp =(struct DealListItem*)malloc(sizeof(struct DealListItem));
 	if(temp==NULL){
-		printf("Íåäîñòàòî÷íî ïàìÿòè íà óñòðîéñòâå\n");
+		printf("ÃÃ¥Ã¤Ã®Ã±Ã²Ã Ã²Ã®Ã·Ã­Ã® Ã¯Ã Ã¬Ã¿Ã²Ã¨ Ã­Ã  Ã³Ã±Ã²Ã°Ã®Ã©Ã±Ã²Ã¢Ã¥\n");
 		exit(1);
 	}
 	temp->next = NULL;
