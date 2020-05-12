@@ -18,8 +18,8 @@ int main()
 	DealInit(&DEAL);
 	ClientInit(&CLIENT);
 	AutoInit(&AUTO);
-	FILE* onclient  = fopen("D:\\clients.txt", "r");
-	FILE* onauto  = fopen("D:\\automobiles.txt", "r");
+	FILE* onclient  = fopen("clients.txt", "r");
+	FILE* onauto  = fopen("automobiles.txt", "r");
 	while(!(feof(onclient))){
 		struct client temp;
 		fscanf(onclient,"%s",temp.FIO);
@@ -1080,9 +1080,9 @@ int main()
 				break;
 			}
 			case 0:{
-				FILE* inclient  = fopen("D:\\clients.txt", "w");
-				FILE* inauto  = fopen("D:\\automobiles.txt", "w");
-				FILE* indeal = fopen("D:\\deals.txt", "a");
+				FILE* inclient  = fopen("clients.txt", "w");
+				FILE* inauto  = fopen("automobiles.txt", "w");
+				FILE* indeal = fopen("deals.txt", "a");
 				DealListItem* dealli=DEAL.start;
 				while(dealli){
 					fprintf(indeal,"%s\n",dealli->data.selled_auto.mark);
