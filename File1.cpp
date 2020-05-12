@@ -11,8 +11,6 @@
 
 int _tmain()
 {
-	SetConsoleOutputCP(1251);
-	SetConsoleCP(1251);
 	srand(time(NULL));
 	DealList DEAL;
 	ClientList CLIENT;
@@ -24,7 +22,6 @@ int _tmain()
 	FILE* onauto  = fopen("D:\\automobiles.txt", "r");
 	while(!(feof(onclient))){
 		struct client temp;
-		char str[154];
 		fscanf(onclient,"%s",temp.FIO);
 		fscanf(onclient,"%s",temp.phone_number);
 		fscanf(onclient,"%s",temp.my_auto.mark);
@@ -37,7 +34,6 @@ int _tmain()
 	}
 	while(!(feof(onauto))){
 		struct automobile temp;
-		char str[154];
 		fscanf(onauto,"%s",temp.mark);
 		fscanf(onauto,"%d",&(temp.year));
 		fscanf(onauto,"%d",&(temp.price));
