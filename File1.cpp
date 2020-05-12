@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
-#include <time.h>
+#include <ctime>
 #include <math.h>
-#include <string.h>
+#include <cstring>
 
 
 #include "Unit3.h"
