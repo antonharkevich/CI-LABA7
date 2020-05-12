@@ -1,10 +1,3 @@
-//---------------------------------------------------------------------------
-
-#pragma hdrstop
-
-#include "Unit1.h"
-//---------------------------------------------------------------------------
-#pragma package(smart_init)
 
 
 
@@ -24,7 +17,7 @@ void AutoInit(struct AutoList* list) {
 void AutoAdd(struct AutoList* list,struct automobile numb) {
 	struct AutoListItem* temp =(struct AutoListItem*)malloc(sizeof(struct AutoListItem));
 	if(temp==NULL){
-		printf("Недостаточно памяти на устройстве\n");
+		printf("ГЌГҐГ¤Г®Г±ГІГ ГІГ®Г·Г­Г® ГЇГ Г¬ГїГІГЁ Г­Г  ГіГ±ГІГ°Г®Г©Г±ГІГўГҐ\n");
 		exit(1);
 	}
 	temp->next = NULL;
@@ -78,13 +71,13 @@ void AutoDelete(struct AutoList* list, struct AutoListItem* li) {
 void AutoPrint(struct AutoList* list) {
 	AutoListItem* li = list->start;
 	while (li) {
-		printf("Автомобиль\n");
-		printf("Марка: %s\n",li->data.mark);
-		printf("Год выпуска: %d\n",li->data.year);
-		printf("Цена: %d\n",li->data.price);
-		printf("Состояние: %s\n",li->data.condition);
-		printf("Объём двигателя: %d\n",li->data.engine_capacity);
-		printf("Максимальная скорость: %d\n\n",li->data.max_speed);
+		printf("ГЂГўГІГ®Г¬Г®ГЎГЁГ«Гј\n");
+		printf("ГЊГ Г°ГЄГ : %s\n",li->data.mark);
+		printf("ГѓГ®Г¤ ГўГ»ГЇГіГ±ГЄГ : %d\n",li->data.year);
+		printf("Г–ГҐГ­Г : %d\n",li->data.price);
+		printf("Г‘Г®Г±ГІГ®ГїГ­ГЁГҐ: %s\n",li->data.condition);
+		printf("ГЋГЎГєВёГ¬ Г¤ГўГЁГЈГ ГІГҐГ«Гї: %d\n",li->data.engine_capacity);
+		printf("ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї Г±ГЄГ®Г°Г®Г±ГІГј: %d\n\n",li->data.max_speed);
 		li = li->next;
 
 	}
@@ -95,41 +88,41 @@ void AutoEdit(struct AutoListItem *li, struct automobile numb){
 	while (li) {
 	   if ((!(strcmp(li->data.mark,numb.mark)))&&li->data.price == numb.price&&(!(strcmp(li->data.condition, numb.condition)))&&li->data.year == numb.year&&li->data.max_speed == numb.max_speed&&li->data.engine_capacity == numb.engine_capacity){
 		   int n=0;
-		   printf("Для редактирования марки автомобиля введите 1\n");
-		   printf("Для редактирования года выпуска автомобиля введите 2\n");
-		   printf("Для редактирования цены автомобиля введите 3\n");
-		   printf("Для редактирования состояния автомобиля введите 4\n");
-		   printf("Для редактирования объёма двигателя автомобиля введите 5\n");
-		   printf("Для редактирования максимальной скорости автомобиля введите 6\n");
+		   printf("Г„Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї Г¬Г Г°ГЄГЁ Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї ГўГўГҐГ¤ГЁГІГҐ 1\n");
+		   printf("Г„Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї ГЈГ®Г¤Г  ГўГ»ГЇГіГ±ГЄГ  Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї ГўГўГҐГ¤ГЁГІГҐ 2\n");
+		   printf("Г„Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї Г¶ГҐГ­Г» Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї ГўГўГҐГ¤ГЁГІГҐ 3\n");
+		   printf("Г„Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї Г±Г®Г±ГІГ®ГїГ­ГЁГї Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї ГўГўГҐГ¤ГЁГІГҐ 4\n");
+		   printf("Г„Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї Г®ГЎГєВёГ¬Г  Г¤ГўГЁГЈГ ГІГҐГ«Гї Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї ГўГўГҐГ¤ГЁГІГҐ 5\n");
+		   printf("Г„Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®Г© Г±ГЄГ®Г°Г®Г±ГІГЁ Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї ГўГўГҐГ¤ГЁГІГҐ 6\n");
 		   printf("\n");
 		   if(!scanf("%d",&n)){
-			   printf("Вы ввели что-то не то\n");
+			   printf("Г‚Г» ГўГўГҐГ«ГЁ Г·ГІГ®-ГІГ® Г­ГҐ ГІГ®\n");
 			   fflush(stdin);
 			   return;
 		   }
 		   switch(n){
 			   case 1:
-				  printf("Введите марку\n");
+				  printf("Г‚ГўГҐГ¤ГЁГІГҐ Г¬Г Г°ГЄГі\n");
 				  scanf("%s",li->data.mark);
 				  return;
 			   case 2:
-				  printf("Введите год выпуска\n");
+				  printf("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГўГ»ГЇГіГ±ГЄГ \n");
 				  scanf("%d",&(li->data.year));
 				  return;
 			   case 3:
-				  printf("Введите цену\n");
+				  printf("Г‚ГўГҐГ¤ГЁГІГҐ Г¶ГҐГ­Гі\n");
 				  scanf("%d",&(li->data.price));
 				  return;
 			   case 4:
-				  printf("Введите состояние\n");
+				  printf("Г‚ГўГҐГ¤ГЁГІГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ\n");
 				  scanf("%s",li->data.condition);
 				  return;
 			   case 5:
-				  printf("Введите объём двигателя\n");
+				  printf("Г‚ГўГҐГ¤ГЁГІГҐ Г®ГЎГєВёГ¬ Г¤ГўГЁГЈГ ГІГҐГ«Гї\n");
 				  scanf("%d",&(li->data.engine_capacity));
 				  return;
 			   case 6:
-				  printf("Введите максимальную скорость\n");
+				  printf("Г‚ГўГҐГ¤ГЁГІГҐ Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­ГіГѕ Г±ГЄГ®Г°Г®Г±ГІГј\n");
 				  scanf("%d",&(li->data.max_speed));
 				  return;
 			   default: return;
@@ -137,7 +130,7 @@ void AutoEdit(struct AutoListItem *li, struct automobile numb){
 	   }
 	   li = li->next;
 	}
-	printf("Такого автомобиля нет\n");
+	printf("Г’Г ГЄГ®ГЈГ® Г ГўГІГ®Г¬Г®ГЎГЁГ«Гї Г­ГҐГІ\n");
 }
 
 
