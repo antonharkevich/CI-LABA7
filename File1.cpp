@@ -9,7 +9,7 @@
 
 
 
-int _tmain()
+int main()
 {
 	srand(time(NULL));
 	DealList DEAL;
